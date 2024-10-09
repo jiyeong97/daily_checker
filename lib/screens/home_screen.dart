@@ -21,6 +21,9 @@ class HomeScreen extends StatelessWidget {
           )
         ),
       ),
+      body: ListView(
+        scrollDirection: Axis.horizontal,
+      ),
     );
   }
 }
