@@ -4,11 +4,12 @@ import 'package:intl/intl.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
-
   String formattedDate = DateFormat.MMMMd('en_US').format(DateTime.now());
 
   @override
   Widget build(BuildContext context) {
+    const image = 'assets/image/SleepCat.png';
+
     return Scaffold(
       appBar: AppBar(
         elevation: 2,
@@ -42,10 +43,12 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           Flexible(
-            flex: 3,
+            flex: 2,
             child: Center(
-              child: Container(
-                
+              child: Image.asset(
+                image,
+                width: 300,
+                height: 300,
               ),
             ),
           ),
