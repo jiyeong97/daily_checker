@@ -25,12 +25,11 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Flexible(
-            flex: 1,
-            child: Container(
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
               alignment: Alignment.center,
               child: Text(
                 formattedDate,
@@ -41,18 +40,100 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-          ),
-          Flexible(
-            flex: 2,
-            child: Center(
+            Center(
               child: Image.asset(
                 image,
                 width: 300,
                 height: 300,
               ),
             ),
-          ),
-        ],
+            Container(
+              height: 45,
+              width: 320,
+              margin: const EdgeInsets.only(bottom: 10),
+              decoration: BoxDecoration(
+                color:const Color(0xffcf6116),
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 10,
+                    offset: const Offset(8, 5),
+                    color: Colors.black.withOpacity(0.5),
+                  )
+                ],
+              ),
+              child: const Text(''),
+            ),
+            Container(
+              height: 45,
+              width: 320,
+              margin: const EdgeInsets.only(bottom: 10),
+              decoration: BoxDecoration(
+                color:const Color(0xffe9a577),
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 10,
+                    offset: const Offset(8, 5),
+                    color: Colors.black.withOpacity(0.5),
+                  )
+                ],
+              ),
+              child: const Text(''),
+            ),
+            Container(
+              height: 45,
+              width: 320,
+              margin: const EdgeInsets.only(bottom: 10),
+              decoration: BoxDecoration(
+                color:const Color(0xffcf6116),
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 10,
+                    offset: const Offset(8, 5),
+                    color: Colors.black.withOpacity(0.5),
+                  )
+                ],
+              ),
+              child: const Text(''),
+            ),
+            Container(
+              height: 45,
+              width: 320,
+              margin: const EdgeInsets.only(bottom: 10),
+              decoration: BoxDecoration(
+                color:const Color(0xffe9a577),
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 10,
+                    offset: const Offset(8, 5),
+                    color: Colors.black.withOpacity(0.5),
+                  )
+                ],
+              ),
+              child: const Text(''),
+            ),
+            Container(
+              height: 45,
+              width: 320,
+              margin: const EdgeInsets.only(bottom: 10),
+              decoration: BoxDecoration(
+                color:const Color(0xffcf6116),
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 10,
+                    offset: const Offset(8, 5),
+                    color: Colors.black.withOpacity(0.5),
+                  )
+                ],
+              ),
+              child: const Text(''),
+            ),
+          ],
+        ),
       ),
     );
   }
