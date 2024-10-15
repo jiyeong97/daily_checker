@@ -52,8 +52,8 @@ class HomeScreen extends StatelessWidget {
               width: 320,
               margin: const EdgeInsets.only(bottom: 10),
               decoration: BoxDecoration(
-                color:const Color(0xffcf6116),
-                borderRadius: BorderRadius.circular(10),
+                color: const Color(0xffcf6116),
+                borderRadius: BorderRadius.circular(30),
                 boxShadow: [
                   BoxShadow(
                     blurRadius: 10,
@@ -62,15 +62,22 @@ class HomeScreen extends StatelessWidget {
                   )
                 ],
               ),
-              child: const Text(''),
+              child: Text(
+                'Neck stretching',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 35,
+                  fontFamily: GoogleFonts.dongle().fontFamily,
+                ),
+              ),
             ),
             Container(
               height: 45,
               width: 320,
               margin: const EdgeInsets.only(bottom: 10),
               decoration: BoxDecoration(
-                color:const Color(0xffe9a577),
-                borderRadius: BorderRadius.circular(10),
+                color: const Color(0xffe9a577),
+                borderRadius: BorderRadius.circular(30),
                 boxShadow: [
                   BoxShadow(
                     blurRadius: 10,
@@ -79,15 +86,22 @@ class HomeScreen extends StatelessWidget {
                   )
                 ],
               ),
-              child: const Text(''),
+              child: Text(
+                'Leg stretching',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 35,
+                  fontFamily: GoogleFonts.dongle().fontFamily,
+                ),
+              ),
             ),
             Container(
               height: 45,
               width: 320,
               margin: const EdgeInsets.only(bottom: 10),
               decoration: BoxDecoration(
-                color:const Color(0xffcf6116),
-                borderRadius: BorderRadius.circular(10),
+                color: const Color(0xffcf6116),
+                borderRadius: BorderRadius.circular(30),
                 boxShadow: [
                   BoxShadow(
                     blurRadius: 10,
@@ -96,15 +110,22 @@ class HomeScreen extends StatelessWidget {
                   )
                 ],
               ),
-              child: const Text(''),
+              child: Text(
+                'Waist work out',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 35,
+                  fontFamily: GoogleFonts.dongle().fontFamily,
+                ),
+              ),
             ),
             Container(
               height: 45,
               width: 320,
               margin: const EdgeInsets.only(bottom: 10),
               decoration: BoxDecoration(
-                color:const Color(0xffe9a577),
-                borderRadius: BorderRadius.circular(10),
+                color: const Color(0xffe9a577),
+                borderRadius: BorderRadius.circular(30),
                 boxShadow: [
                   BoxShadow(
                     blurRadius: 10,
@@ -113,15 +134,22 @@ class HomeScreen extends StatelessWidget {
                   )
                 ],
               ),
-              child: const Text(''),
+              child: Text(
+                'Hip work out',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 35,
+                  fontFamily: GoogleFonts.dongle().fontFamily,
+                ),
+              ),
             ),
             Container(
               height: 45,
               width: 320,
               margin: const EdgeInsets.only(bottom: 10),
               decoration: BoxDecoration(
-                color:const Color(0xffcf6116),
-                borderRadius: BorderRadius.circular(10),
+                color: const Color(0xffcf6116),
+                borderRadius: BorderRadius.circular(30),
                 boxShadow: [
                   BoxShadow(
                     blurRadius: 10,
@@ -130,7 +158,14 @@ class HomeScreen extends StatelessWidget {
                   )
                 ],
               ),
-              child: const Text(''),
+              child: Text(
+                'Leg work out',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 35,
+                  fontFamily: GoogleFonts.dongle().fontFamily,
+                ),
+              ),
             ),
           ],
         ),
