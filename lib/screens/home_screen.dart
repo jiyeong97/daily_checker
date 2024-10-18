@@ -11,6 +11,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const image = 'assets/image/SleepCat.png';
+    const pawImg = 'assets/image/FoundationPaw.png';
 
     return Scaffold(
       appBar: AppBar(
@@ -179,6 +180,22 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
+            Image.asset(
+              pawImg,
+              width: 300,
+              height: 300,
+            ),
+            Text(
+              'Total',
+              style: TextStyle(
+                fontSize: 80,
+                fontFamily: GoogleFonts.darumadropOne().fontFamily,
+                color: const Color(0xffcf6116),
+              ),
+            ),
+            const SizedBox(
+              height: 50,
+            )
           ],
         ),
       ),
