@@ -13,6 +13,7 @@ class _DetailScreenState extends State<DetailScreen> {
   final videoURL = "https://youtu.be/dJXZRZvqbYg?si=aiu28M5H8rrK9PgE";
 
   late YoutubePlayerController _controller;
+  final image = 'assets/image/OrangeCatPaw.png';
 
   @override
   void initState() {
@@ -51,6 +52,14 @@ class _DetailScreenState extends State<DetailScreen> {
             controller: _controller,
             showVideoProgressIndicator: true,
             ),
+            Center(
+              child: Image.asset(
+                  image,
+                  width: 300,
+                  height: 300,
+                ),
+            ),
+            const Text('High - Five')
         ],
       ),
     );
