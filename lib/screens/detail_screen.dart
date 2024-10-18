@@ -31,7 +31,7 @@ class _DetailScreenState extends State<DetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:AppBar(
+      appBar: AppBar(
         elevation: 2,
         backgroundColor: const Color(0xffcf6116),
         foregroundColor: Colors.white,
@@ -51,15 +51,24 @@ class _DetailScreenState extends State<DetailScreen> {
           YoutubePlayer(
             controller: _controller,
             showVideoProgressIndicator: true,
+          ),
+          Center(
+            child: Image.asset(
+              image,
+              width: 300,
+              height: 280,
             ),
-            Center(
-              child: Image.asset(
-                  image,
-                  width: 300,
-                  height: 300,
-                ),
+          ),
+          Center(
+            child: Text(
+              'High - Five',
+              style: TextStyle(
+                fontSize: 50,
+                fontFamily: GoogleFonts.darumadropOne().fontFamily,
+                color: const Color(0xffcf6116),
+              ),
             ),
-            const Text('High - Five')
+          ),
         ],
       ),
     );
