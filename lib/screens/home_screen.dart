@@ -237,15 +237,18 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Container(
                     alignment: Alignment.center,
-                    child: Text(
-                      '1',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 35,
-                        fontFamily: GoogleFonts.dongle().fontFamily,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 140),
+                      child: Text(
+                        '1',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 80,
+                          fontFamily: GoogleFonts.dongle().fontFamily,
+                        ),
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
