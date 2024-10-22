@@ -224,10 +224,30 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Image.asset(
-              pawImg,
-              width: 300,
-              height: 300,
+            Center(
+              child: Stack(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    child: Image.asset(
+                      pawImg,
+                      width: 300,
+                      height: 300,
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    child: Text(
+                      '1',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 35,
+                        fontFamily: GoogleFonts.dongle().fontFamily,
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
             Text(
               'Total',
