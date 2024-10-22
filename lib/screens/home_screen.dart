@@ -2,7 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:daily_checker/screens/detail_screen.dart';
+import 'package:daily_checker/screens/exercise/hip_workout.dart';
+import 'package:daily_checker/screens/exercise/leg_stretching.dart';
+import 'package:daily_checker/screens/exercise/leg_workout.dart';
+import 'package:daily_checker/screens/exercise/neck_stretching.dart';
+import 'package:daily_checker/screens/exercise/waist_workout.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -55,7 +59,7 @@ class HomeScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   CupertinoPageRoute(
-                    builder: (context) => const DetailScreen(),
+                    builder: (context) => const NeckStretching(),
                   ),
                 );
               },
@@ -84,27 +88,37 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              height: 45,
-              width: 320,
-              margin: const EdgeInsets.only(bottom: 10),
-              decoration: BoxDecoration(
-                color: const Color(0xffe9a577),
-                borderRadius: BorderRadius.circular(30),
-                boxShadow: [
-                  BoxShadow(
-                    blurRadius: 10,
-                    offset: const Offset(8, 5),
-                    color: Colors.black.withOpacity(0.5),
-                  )
-                ],
-              ),
-              child: Text(
-                'Leg stretching',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 35,
-                  fontFamily: GoogleFonts.dongle().fontFamily,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                    builder: (context) => const LegStretching(),
+                  ),
+                );
+              },
+              child: Container(
+                height: 45,
+                width: 320,
+                margin: const EdgeInsets.only(bottom: 10),
+                decoration: BoxDecoration(
+                  color: const Color(0xffe9a577),
+                  borderRadius: BorderRadius.circular(30),
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 10,
+                      offset: const Offset(8, 5),
+                      color: Colors.black.withOpacity(0.5),
+                    )
+                  ],
+                ),
+                child: Text(
+                  'Leg stretching',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 35,
+                    fontFamily: GoogleFonts.dongle().fontFamily,
+                  ),
                 ),
               ),
             ),

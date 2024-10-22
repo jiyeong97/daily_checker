@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class DetailScreen extends StatefulWidget {
-  const DetailScreen({super.key});
+class LegWorkout extends StatefulWidget {
+  const LegWorkout({super.key});
 
   @override
-  State<DetailScreen> createState() => _DetailScreenState();
+  State<LegWorkout> createState() => _DetailScreenState();
 }
 
-class _DetailScreenState extends State<DetailScreen> {
-  final videoURL = "https://youtu.be/dJXZRZvqbYg?si=aiu28M5H8rrK9PgE";
+class _DetailScreenState extends State<LegWorkout> {
+  final videoURL = "https://youtu.be/UMyGJAMj_DQ?si=MNfijoHw9r4G8yLc";
 
   late YoutubePlayerController _controller;
   final image = 'assets/image/OrangeCatPaw.png';
