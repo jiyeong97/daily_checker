@@ -122,75 +122,105 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              height: 45,
-              width: 320,
-              margin: const EdgeInsets.only(bottom: 10),
-              decoration: BoxDecoration(
-                color: const Color(0xffcf6116),
-                borderRadius: BorderRadius.circular(30),
-                boxShadow: [
-                  BoxShadow(
-                    blurRadius: 10,
-                    offset: const Offset(8, 5),
-                    color: Colors.black.withOpacity(0.5),
-                  )
-                ],
-              ),
-              child: Text(
-                'Waist work out',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 35,
-                  fontFamily: GoogleFonts.dongle().fontFamily,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                    builder: (context) => const WaistWorkout(),
+                  ),
+                );
+              },
+              child: Container(
+                height: 45,
+                width: 320,
+                margin: const EdgeInsets.only(bottom: 10),
+                decoration: BoxDecoration(
+                  color: const Color(0xffcf6116),
+                  borderRadius: BorderRadius.circular(30),
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 10,
+                      offset: const Offset(8, 5),
+                      color: Colors.black.withOpacity(0.5),
+                    )
+                  ],
+                ),
+                child: Text(
+                  'Waist work out',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 35,
+                    fontFamily: GoogleFonts.dongle().fontFamily,
+                  ),
                 ),
               ),
             ),
-            Container(
-              height: 45,
-              width: 320,
-              margin: const EdgeInsets.only(bottom: 10),
-              decoration: BoxDecoration(
-                color: const Color(0xffe9a577),
-                borderRadius: BorderRadius.circular(30),
-                boxShadow: [
-                  BoxShadow(
-                    blurRadius: 10,
-                    offset: const Offset(8, 5),
-                    color: Colors.black.withOpacity(0.5),
-                  )
-                ],
-              ),
-              child: Text(
-                'Hip work out',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 35,
-                  fontFamily: GoogleFonts.dongle().fontFamily,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                    builder: (context) => const HipWorkout(),
+                  ),
+                );
+              },
+              child: Container(
+                height: 45,
+                width: 320,
+                margin: const EdgeInsets.only(bottom: 10),
+                decoration: BoxDecoration(
+                  color: const Color(0xffe9a577),
+                  borderRadius: BorderRadius.circular(30),
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 10,
+                      offset: const Offset(8, 5),
+                      color: Colors.black.withOpacity(0.5),
+                    )
+                  ],
+                ),
+                child: Text(
+                  'Hip work out',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 35,
+                    fontFamily: GoogleFonts.dongle().fontFamily,
+                  ),
                 ),
               ),
             ),
-            Container(
-              height: 45,
-              width: 320,
-              margin: const EdgeInsets.only(bottom: 10),
-              decoration: BoxDecoration(
-                color: const Color(0xffcf6116),
-                borderRadius: BorderRadius.circular(30),
-                boxShadow: [
-                  BoxShadow(
-                    blurRadius: 10,
-                    offset: const Offset(8, 5),
-                    color: Colors.black.withOpacity(0.5),
-                  )
-                ],
-              ),
-              child: Text(
-                'Leg work out',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 35,
-                  fontFamily: GoogleFonts.dongle().fontFamily,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                    builder: (context) => const LegWorkout(),
+                  ),
+                );
+              },
+              child: Container(
+                height: 45,
+                width: 320,
+                margin: const EdgeInsets.only(bottom: 10),
+                decoration: BoxDecoration(
+                  color: const Color(0xffcf6116),
+                  borderRadius: BorderRadius.circular(30),
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 10,
+                      offset: const Offset(8, 5),
+                      color: Colors.black.withOpacity(0.5),
+                    )
+                  ],
+                ),
+                child: Text(
+                  'Leg work out',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 35,
+                    fontFamily: GoogleFonts.dongle().fontFamily,
+                  ),
                 ),
               ),
             ),
