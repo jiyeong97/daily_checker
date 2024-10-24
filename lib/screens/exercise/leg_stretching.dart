@@ -14,6 +14,11 @@ class _DetailScreenState extends State<LegStretching> {
 
   late YoutubePlayerController _controller;
   final image = 'assets/image/OrangeCatPaw.png';
+  bool legStretching = false;
+
+  bool onClick(){
+    return legStretching = true;
+  }
 
   @override
   void initState() {
@@ -52,11 +57,16 @@ class _DetailScreenState extends State<LegStretching> {
             controller: _controller,
             showVideoProgressIndicator: true,
           ),
-          Center(
-            child: Image.asset(
-              image,
-              width: 300,
-              height: 280,
+          GestureDetector(
+            onTap: () {
+              onClick();
+            },
+            child: Center(
+              child: Image.asset(
+                image,
+                width: 300,
+                height: 280,
+              ),
             ),
           ),
           Center(

@@ -14,6 +14,11 @@ class _DetailScreenState extends State<WaistWorkout> {
 
   late YoutubePlayerController _controller;
   final image = 'assets/image/OrangeCatPaw.png';
+  bool waistWorkOut = false;
+
+  bool onClick(){
+    return waistWorkOut = true;
+  }
 
   @override
   void initState() {
@@ -52,11 +57,16 @@ class _DetailScreenState extends State<WaistWorkout> {
             controller: _controller,
             showVideoProgressIndicator: true,
           ),
-          Center(
-            child: Image.asset(
-              image,
-              width: 300,
-              height: 280,
+          GestureDetector(
+            onTap: () {
+              onClick();
+            },
+            child: Center(
+              child: Image.asset(
+                image,
+                width: 300,
+                height: 280,
+              ),
             ),
           ),
           Center(
