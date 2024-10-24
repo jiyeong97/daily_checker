@@ -8,9 +8,16 @@ import 'package:daily_checker/screens/exercise/leg_workout.dart';
 import 'package:daily_checker/screens/exercise/neck_stretching.dart';
 import 'package:daily_checker/screens/exercise/waist_workout.dart';
 
-class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   String formattedDate = DateFormat.MMMMd('en_US').format(DateTime.now());
+  int total = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -240,7 +247,7 @@ class HomeScreen extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.only(top: 140),
                       child: Text(
-                        '1',
+                        '$total',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 80,
