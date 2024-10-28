@@ -6,10 +6,10 @@ class WaistWorkout extends StatefulWidget {
   const WaistWorkout({super.key});
 
   @override
-  State<WaistWorkout> createState() => _DetailScreenState();
+  State<WaistWorkout> createState() => WaistWorkOut();
 }
 
-class _DetailScreenState extends State<WaistWorkout> {
+class WaistWorkOut extends State<WaistWorkout> {
   final videoURL = "https://youtu.be/wptXCZuLF_g?si=Y4o-VBRro26ghLqq";
 
   late YoutubePlayerController _controller;
