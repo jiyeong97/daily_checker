@@ -19,6 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   String formattedDate = DateFormat.MMMMd('en_US').format(DateTime.now());
   int total = 0;
 
+
   @override
   Widget build(BuildContext context) {
     const image = 'assets/image/SleepCat.png';
@@ -85,14 +86,20 @@ class _HomeScreenState extends State<HomeScreen> {
                     )
                   ],
                 ),
-                child: Text(
-                  'Neck stretching',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 35,
-                    fontFamily: GoogleFonts.dongle().fontFamily,
-                  ),
+                child: Row(
+                  children: [
+                    Text(
+                      'Neck stretching',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 35,
+                        fontFamily: GoogleFonts.dongle().fontFamily,
+                      ),
+                    ),
+                    Icon(NeckStretchings().neckStretching? Icons.pets : null)
+                  ],
                 ),
+                
               ),
             ),
             GestureDetector(

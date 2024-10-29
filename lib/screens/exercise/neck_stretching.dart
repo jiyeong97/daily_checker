@@ -60,6 +60,7 @@ class NeckStretchings extends State<NeckStretching> {
           GestureDetector(
             onTap: () {
               onClick();
+               Navigator.pop(context);
             },
             child: Center(
               child: Image.asset(
