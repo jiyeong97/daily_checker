@@ -19,7 +19,6 @@ class _HomeScreenState extends State<HomeScreen> {
   String formattedDate = DateFormat.MMMMd('en_US').format(DateTime.now());
   int total = 0;
 
-
   @override
   Widget build(BuildContext context) {
     const image = 'assets/image/SleepCat.png';
@@ -97,11 +96,15 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontFamily: GoogleFonts.dongle().fontFamily,
                       ),
                     ),
-                    const SizedBox(width: 60,),
-                    Icon(NeckStretchings().neckStretching? Icons.pets : null)
+                    const SizedBox(
+                      width: 60,
+                    ),
+                    Icon(
+                      NeckStretchings().neckStretching ? Icons.pets : null,
+                      color: Colors.white,
+                    ),
                   ],
                 ),
-                
               ),
             ),
             GestureDetector(
@@ -139,8 +142,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontFamily: GoogleFonts.dongle().fontFamily,
                       ),
                     ),
-                    const SizedBox(width: 60,),
-                    Icon(LegStretchings().legStretching? Icons.pets : null)
+                    const SizedBox(
+                      width: 60,
+                    ),
+                    Icon(
+                      LegStretchings().legStretching ? Icons.pets : null,
+                      color: Colors.white,
+                    )
                   ],
                 ),
               ),
@@ -180,8 +188,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontFamily: GoogleFonts.dongle().fontFamily,
                       ),
                     ),
-                    const SizedBox(width: 60,),
-                    Icon(WaistWorkOut().waistWorkOut? Icons.pets : null)
+                    const SizedBox(
+                      width: 60,
+                    ),
+                    Icon(
+                      WaistWorkOut().waistWorkOut ? Icons.pets : null,
+                      color: Colors.white,
+                    )
                   ],
                 ),
               ),
@@ -221,8 +234,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontFamily: GoogleFonts.dongle().fontFamily,
                       ),
                     ),
-                    const SizedBox(width: 60,),
-                    Icon(HipWorkOut().hipWorkOut? Icons.pets : null)
+                    const SizedBox(
+                      width: 60,
+                    ),
+                    Icon(
+                      HipWorkOut().hipWorkOut ? Icons.pets : null,
+                      color: Colors.white,
+                    )
                   ],
                 ),
               ),
@@ -262,8 +280,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontFamily: GoogleFonts.dongle().fontFamily,
                       ),
                     ),
-                    const SizedBox(width: 60,),
-                    Icon(LegWorkOut().legWorkOut? Icons.pets : null)
+                    const SizedBox(
+                      width: 60,
+                    ),
+                    Icon(
+                      LegWorkOut().legWorkOut ? Icons.pets :null,
+                      color: Colors.white,
+                    ),
                   ],
                 ),
               ),
