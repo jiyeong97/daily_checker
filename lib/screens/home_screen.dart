@@ -126,13 +126,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     )
                   ],
                 ),
-                child: Text(
-                  'Leg stretching',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 35,
-                    fontFamily: GoogleFonts.dongle().fontFamily,
-                  ),
+                child: Row(
+                  children: [
+                    Text(
+                      'Leg stretching',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 35,
+                        fontFamily: GoogleFonts.dongle().fontFamily,
+                      ),
+                    ),
+                    Icon(LegStretchings().legStretching? Icons.pets : null)
+                  ],
                 ),
               ),
             ),
@@ -160,13 +165,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     )
                   ],
                 ),
-                child: Text(
-                  'Waist work out',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 35,
-                    fontFamily: GoogleFonts.dongle().fontFamily,
-                  ),
+                child: Row(
+                  children: [
+                    Text(
+                      'Waist work out',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 35,
+                        fontFamily: GoogleFonts.dongle().fontFamily,
+                      ),
+                    ),
+                    Icon(WaistWorkOut().waistWorkOut? Icons.pets : null)
+                  ],
                 ),
               ),
             ),
@@ -194,13 +204,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     )
                   ],
                 ),
-                child: Text(
-                  'Hip work out',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 35,
-                    fontFamily: GoogleFonts.dongle().fontFamily,
-                  ),
+                child: Row(
+                  children: [
+                    Text(
+                      'Hip work out',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 35,
+                        fontFamily: GoogleFonts.dongle().fontFamily,
+                      ),
+                    ),
+                    Icon(HipWorkOut().hipWorkOut? Icons.pets : null)
+                  ],
                 ),
               ),
             ),
@@ -228,13 +243,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     )
                   ],
                 ),
-                child: Text(
-                  'Leg work out',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 35,
-                    fontFamily: GoogleFonts.dongle().fontFamily,
-                  ),
+                child: Row(
+                  children: [
+                    Text(
+                      'Leg work out',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 35,
+                        fontFamily: GoogleFonts.dongle().fontFamily,
+                      ),
+                    ),
+                    Icon(LegWorkOut().legWorkOut? Icons.pets : null)
+                  ],
                 ),
               ),
             ),
