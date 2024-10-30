@@ -87,6 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       'Neck stretching',
@@ -96,6 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontFamily: GoogleFonts.dongle().fontFamily,
                       ),
                     ),
+                    const SizedBox(width: 60,),
                     Icon(NeckStretchings().neckStretching? Icons.pets : null)
                   ],
                 ),
@@ -127,6 +129,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       'Leg stretching',
@@ -136,6 +139,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontFamily: GoogleFonts.dongle().fontFamily,
                       ),
                     ),
+                    const SizedBox(width: 60,),
                     Icon(LegStretchings().legStretching? Icons.pets : null)
                   ],
                 ),
@@ -166,6 +170,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       'Waist work out',
@@ -175,6 +180,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontFamily: GoogleFonts.dongle().fontFamily,
                       ),
                     ),
+                    const SizedBox(width: 60,),
                     Icon(WaistWorkOut().waistWorkOut? Icons.pets : null)
                   ],
                 ),
@@ -205,6 +211,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       'Hip work out',
@@ -214,6 +221,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontFamily: GoogleFonts.dongle().fontFamily,
                       ),
                     ),
+                    const SizedBox(width: 60,),
                     Icon(HipWorkOut().hipWorkOut? Icons.pets : null)
                   ],
                 ),
@@ -244,6 +252,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       'Leg work out',
@@ -253,6 +262,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontFamily: GoogleFonts.dongle().fontFamily,
                       ),
                     ),
+                    const SizedBox(width: 60,),
                     Icon(LegWorkOut().legWorkOut? Icons.pets : null)
                   ],
                 ),
