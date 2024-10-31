@@ -18,7 +18,6 @@ class NeckStretchings extends State<NeckStretching> {
   bool neckStretching = false;
 
   bool onClick(){
-    print('true');
     return neckStretching = true;
   }
 
@@ -67,9 +66,10 @@ class NeckStretchings extends State<NeckStretching> {
                   MaterialPageRoute(builder: (context) => const HomeScreen()),
                 ).then(
                   (value) => setState(() {
-                    NeckStretchings().neckStretching = true;
+                    neckStretching = true;
                   }),
                 );
+              print(neckStretching);
             },
             child: Center(
               child: Image.asset(
