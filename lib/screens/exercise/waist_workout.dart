@@ -62,6 +62,13 @@ class WaistWorkOut extends State<WaistWorkout> {
           GestureDetector(
             onTap: () {
               onClick();
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomeScreen()),
+                ).then(
+                  (value) => setState(() {
+                  }),
+                );
             },
             child: Center(
               child: Image.asset(

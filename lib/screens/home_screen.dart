@@ -19,7 +19,6 @@ class _HomeScreenState extends State<HomeScreen> {
   String formattedDate = DateFormat.MMMMd('en_US').format(DateTime.now());
   int total = 0;
 
-
   @override
   Widget build(BuildContext context) {
     const image = 'assets/image/SleepCat.png';
@@ -68,7 +67,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   context,
                   MaterialPageRoute(builder: (context) => const NeckStretching()),
                 ).then(
-                  (value) => setState(() {}),
+                  (value) => setState(() {
+                  }),
                 );
               },
               child: Container(
