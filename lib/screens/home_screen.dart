@@ -19,6 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   String formattedDate = DateFormat.MMMMd('en_US').format(DateTime.now());
   int total = 0;
 
+
   @override
   Widget build(BuildContext context) {
     const image = 'assets/image/SleepCat.png';
@@ -65,9 +66,9 @@ class _HomeScreenState extends State<HomeScreen> {
               onTap: () {
                 Navigator.push(
                   context,
-                  CupertinoPageRoute(
-                    builder: (context) => const NeckStretching(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const NeckStretching()),
+                ).then(
+                  (value) => setState(() {}),
                 );
               },
               child: Container(
@@ -111,9 +112,9 @@ class _HomeScreenState extends State<HomeScreen> {
               onTap: () {
                 Navigator.push(
                   context,
-                  CupertinoPageRoute(
-                    builder: (context) => const LegStretching(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const LegStretching()),
+                ).then(
+                  (value) => setState(() {}),
                 );
               },
               child: Container(
@@ -157,9 +158,9 @@ class _HomeScreenState extends State<HomeScreen> {
               onTap: () {
                 Navigator.push(
                   context,
-                  CupertinoPageRoute(
-                    builder: (context) => const WaistWorkout(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const WaistWorkout()),
+                ).then(
+                  (value) => setState(() {}),
                 );
               },
               child: Container(
@@ -203,9 +204,9 @@ class _HomeScreenState extends State<HomeScreen> {
               onTap: () {
                 Navigator.push(
                   context,
-                  CupertinoPageRoute(
-                    builder: (context) => const HipWorkout(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const HipWorkout()),
+                ).then(
+                  (value) => setState(() {}),
                 );
               },
               child: Container(
@@ -249,9 +250,9 @@ class _HomeScreenState extends State<HomeScreen> {
               onTap: () {
                 Navigator.push(
                   context,
-                  CupertinoPageRoute(
-                    builder: (context) => const LegWorkout(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const LegWorkout()),
+                ).then(
+                  (value) => setState(() {}),
                 );
               },
               child: Container(
@@ -284,7 +285,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 60,
                     ),
                     Icon(
-                      LegWorkOut().legWorkOut ? Icons.pets :null,
+                      LegWorkOut().legWorkOut ? Icons.pets : null,
                       color: Colors.white,
                     ),
                   ],

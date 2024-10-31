@@ -1,3 +1,4 @@
+import 'package:daily_checker/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
@@ -17,6 +18,7 @@ class NeckStretchings extends State<NeckStretching> {
   bool neckStretching = false;
 
   bool onClick(){
+    print('true');
     return neckStretching = true;
   }
 
@@ -60,7 +62,6 @@ class NeckStretchings extends State<NeckStretching> {
           GestureDetector(
             onTap: () {
               onClick();
-               Navigator.pop(context);
             },
             child: Center(
               child: Image.asset(

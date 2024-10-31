@@ -1,3 +1,5 @@
+import 'package:daily_checker/screens/home_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
@@ -16,7 +18,7 @@ class WaistWorkOut extends State<WaistWorkout> {
   final image = 'assets/image/OrangeCatPaw.png';
   bool waistWorkOut = false;
 
-  bool onClick(){
+  bool onClick() {
     return waistWorkOut = true;
   }
 
