@@ -9,7 +9,8 @@ import 'package:daily_checker/screens/exercise/neck_stretching.dart';
 import 'package:daily_checker/screens/exercise/waist_workout.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key,});
+  final bool? data;
+  const HomeScreen({super.key, this.data});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -25,8 +26,9 @@ class _HomeScreenState extends State<HomeScreen> {
   int total = 0;
 
   void test(){
-    print(NeckStretchings().neckStretching);
+    print(const HomeScreen().data);
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const NeckStretching()),
+                    MaterialPageRoute(builder: (context) => NeckStretching()),
                   ).then(
                     (value) => setState(() {
                     }),
@@ -114,9 +116,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: 60,
                       ),
                       Icon(
-                        NeckStretchings().neckStretching ? Icons.pets : null,
+                        LegStretchings().legStretching ? Icons.pets : null,
                         color: Colors.white,
-                      ),
+                      )
                     ],
                   ),
                 ),

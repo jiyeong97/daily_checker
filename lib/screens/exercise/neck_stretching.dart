@@ -4,7 +4,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class NeckStretching extends StatefulWidget {
-  const NeckStretching({super.key});
+  bool? neckStretching = false;
+
+  NeckStretching({super.key, this.neckStretching});
 
   @override
   State<NeckStretching> createState() => NeckStretchings();
@@ -15,10 +17,9 @@ class NeckStretchings extends State<NeckStretching> {
 
   late YoutubePlayerController _controller;
   final image = 'assets/image/OrangeCatPaw.png';
-  bool neckStretching = false;
 
   bool onClick(){
-    return neckStretching = true;
+    return NeckStretching().neckStretching = true;
   }
 
   @override
@@ -63,13 +64,9 @@ class NeckStretchings extends State<NeckStretching> {
               onClick();
               Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const HomeScreen()),
-                ).then(
-                  (value) => setState(() {
-                    neckStretching = true;
-                  }),
+                  MaterialPageRoute(builder: (context) => HomeScreen(data : NeckStretching().neckStretching)),
                 );
-              print(neckStretching);
+              print(NeckStretching().neckStretching);
             },
             child: Center(
               child: Image.asset(
