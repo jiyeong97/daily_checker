@@ -14,11 +14,6 @@ class LegStretchings extends State<LegStretching> {
 
   late YoutubePlayerController _controller;
   final image = 'assets/image/OrangeCatPaw.png';
-  bool legStretching = false;
-
-  bool onClick(){
-    return legStretching = true;
-  }
 
   @override
   void initState() {
@@ -59,7 +54,7 @@ class LegStretchings extends State<LegStretching> {
           ),
           GestureDetector(
             onTap: () {
-              onClick();
+               Navigator.pop(context, true);
             },
             child: Center(
               child: Image.asset(

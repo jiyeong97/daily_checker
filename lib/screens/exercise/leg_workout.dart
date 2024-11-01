@@ -14,11 +14,6 @@ class LegWorkOut extends State<LegWorkout> {
 
   late YoutubePlayerController _controller;
   final image = 'assets/image/OrangeCatPaw.png';
-  bool legWorkOut = false;
-
-  bool onClick(){
-    return legWorkOut = true;
-  }
 
   @override
   void initState() {
@@ -59,7 +54,7 @@ class LegWorkOut extends State<LegWorkout> {
           ),
           GestureDetector(
             onTap: (){
-              onClick();
+              Navigator.pop(context, true);
             },
             child: Center(
               child: Image.asset(

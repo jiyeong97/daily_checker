@@ -16,11 +16,6 @@ class WaistWorkOut extends State<WaistWorkout> {
 
   late YoutubePlayerController _controller;
   final image = 'assets/image/OrangeCatPaw.png';
-  bool waistWorkOut = false;
-
-  bool onClick() {
-    return waistWorkOut = true;
-  }
 
   @override
   void initState() {
@@ -61,14 +56,7 @@ class WaistWorkOut extends State<WaistWorkout> {
           ),
           GestureDetector(
             onTap: () {
-              onClick();
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const HomeScreen()),
-                ).then(
-                  (value) => setState(() {
-                  }),
-                );
+              Navigator.pop(context, true);
             },
             child: Center(
               child: Image.asset(

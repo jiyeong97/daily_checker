@@ -19,10 +19,38 @@ class _HomeScreenState extends State<HomeScreen> {
   String formattedDate = DateFormat.MMMMd('en_US').format(DateTime.now());
   int total = 0;
   bool neckStretchingComplete = false;
+  bool waistWorkOutComplete = false;
+  bool legStretchingComplete = false;
+  bool legWorkOutComplete = false;
+  bool hipWorkOutComplete = false;
 
-  void updateBool(bool value) {
+  void updateNeckStretchingBool(bool value) {
     setState(() {
       neckStretchingComplete = value;
+    });
+  }
+
+  void updateWaistWorkOutBool(bool value) {
+    setState(() {
+      waistWorkOutComplete = value;
+    });
+  }
+
+  void updateLegStretchingBool(bool value) {
+    setState(() {
+      legStretchingComplete = value;
+    });
+  }
+
+  void updateLegWorkOutBool(bool value) {
+    setState(() {
+      legWorkOutComplete = value;
+    });
+  }
+
+  void updateHipWorkOutBool(bool value) {
+    setState(() {
+      hipWorkOutComplete = value;
     });
   }
 
@@ -77,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 );
                 if (result != null) {
-                  updateBool(result);
+                 updateNeckStretchingBool(result);
                 }
               },
               child: Container(
@@ -118,14 +146,16 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             GestureDetector(
-              onTap: () {
-                Navigator.push(
+              onTap: () async {
+                final result = await Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const LegStretching()),
-                ).then(
-                  (value) => setState(() {}),
+                    builder: (context) => const LegStretching(),
+                  ),
                 );
+                if (result != null) {
+                 updateLegStretchingBool(result);
+                }
               },
               child: Container(
                 height: 45,
@@ -157,7 +187,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 60,
                     ),
                     Icon(
-                      LegStretchings().legStretching ? Icons.pets : null,
+                      legStretchingComplete ? Icons.pets : null,
                       color: Colors.white,
                     )
                   ],
@@ -165,13 +195,16 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             GestureDetector(
-              onTap: () {
-                Navigator.push(
+              onTap: () async {
+                final result = await Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const WaistWorkout()),
-                ).then(
-                  (value) => setState(() {}),
+                  MaterialPageRoute(
+                    builder: (context) => const WaistWorkout(),
+                  ),
                 );
+                if (result != null) {
+                 updateWaistWorkOutBool(result);
+                }
               },
               child: Container(
                 height: 45,
@@ -203,7 +236,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 60,
                     ),
                     Icon(
-                      WaistWorkOut().waistWorkOut ? Icons.pets : null,
+                      waistWorkOutComplete ? Icons.pets : null,
                       color: Colors.white,
                     )
                   ],
@@ -211,13 +244,16 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             GestureDetector(
-              onTap: () {
-                Navigator.push(
+              onTap: () async {
+                final result = await Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const HipWorkout()),
-                ).then(
-                  (value) => setState(() {}),
+                  MaterialPageRoute(
+                    builder: (context) => const HipWorkout(),
+                  ),
                 );
+                if (result != null) {
+                 updateHipWorkOutBool(result);
+                }
               },
               child: Container(
                 height: 45,
@@ -249,7 +285,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 60,
                     ),
                     Icon(
-                      HipWorkOut().hipWorkOut ? Icons.pets : null,
+                      hipWorkOutComplete ? Icons.pets : null,
                       color: Colors.white,
                     )
                   ],
@@ -257,13 +293,16 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             GestureDetector(
-              onTap: () {
-                Navigator.push(
+              onTap: () async {
+                final result = await Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const LegWorkout()),
-                ).then(
-                  (value) => setState(() {}),
+                  MaterialPageRoute(
+                    builder: (context) => const LegWorkout(),
+                  ),
                 );
+                if (result != null) {
+                 updateLegWorkOutBool(result);
+                }
               },
               child: Container(
                 height: 45,
@@ -295,7 +334,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 60,
                     ),
                     Icon(
-                      LegWorkOut().legWorkOut ? Icons.pets : null,
+                      legWorkOutComplete ? Icons.pets : null,
                       color: Colors.white,
                     ),
                   ],
