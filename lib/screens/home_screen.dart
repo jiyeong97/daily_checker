@@ -24,6 +24,25 @@ class _HomeScreenState extends State<HomeScreen> {
   bool legWorkOutComplete = false;
   bool hipWorkOutComplete = false;
 
+  int totalSum(){
+    if(neckStretchingComplete == true){
+      total++;
+    }
+    else if(waistWorkOutComplete == true){
+      total++;
+    }
+    else if(legStretchingComplete == true){
+      total++;
+    }
+    else if(legWorkOutComplete == true){
+      total++;
+    }
+    else if(hipWorkOutComplete == true){
+      total++;
+    }
+    return total;
+  }
+
   void updateNeckStretchingBool(bool value) {
     setState(() {
       neckStretchingComplete = value;
@@ -58,6 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     const image = 'assets/image/SleepCat.png';
     const pawImg = 'assets/image/FoundationPaw.png';
+    totalSum();
 
     return Scaffold(
       appBar: AppBar(
