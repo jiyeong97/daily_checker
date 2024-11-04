@@ -67,6 +67,25 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  String imgchange(){
+    if(total % 5 == 0){
+      return 'assets/image/SleepCat.png';
+    }
+    else if(total % 5 == 1){
+      return 'assets/image/EyesOnYouOrangeCat.png';
+    }
+    else if(total % 5 == 2){
+      return 'assets/image/OrangeCat.png';
+    }
+    else if(total % 5 == 3){
+      return 'assets/image/HighFiveOrangeCat.png';
+    }
+    else if(total % 5 == 4){
+      return 'assets/image/ThumbsUpOrangeCat.gif';
+    }
+    return '';
+  }
+
   void updateHipWorkOutBool(bool value) {
     setState(() {
       hipWorkOutComplete = value;
@@ -75,7 +94,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    const image = 'assets/image/SleepCat.png';
+    String img;
+    img = imgchange();
     const pawImg = 'assets/image/FoundationPaw.png';
     totalSum();
 
@@ -111,7 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Center(
               child: Image.asset(
-                image,
+                img,
                 width: 300,
                 height: 300,
               ),
