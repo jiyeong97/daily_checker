@@ -134,6 +134,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 img,
                 width: 300,
                 height: 300,
+                gaplessPlayback: true,
               ),
             ),
             GestureDetector(
