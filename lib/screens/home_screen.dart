@@ -137,6 +137,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 gaplessPlayback: true,
               ),
             ),
+            const SizedBox(
+              height: 30,
+            ),
             GestureDetector(
               onTap: () async {
                 final result = await Navigator.push(
