@@ -7,6 +7,7 @@ import 'package:daily_checker/screens/exercise/leg_stretching.dart';
 import 'package:daily_checker/screens/exercise/leg_workout.dart';
 import 'package:daily_checker/screens/exercise/neck_stretching.dart';
 import 'package:daily_checker/screens/exercise/waist_workout.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -23,21 +24,23 @@ class _HomeScreenState extends State<HomeScreen> {
   bool legStretchingComplete = false;
   bool legWorkOutComplete = false;
   bool hipWorkOutComplete = false;
+  late SharedPreferences prefs;
 
-  int totalSum(){
-    if(neckStretchingComplete == true){
+  Future initPref() async {
+    prefs = await SharedPreferences.getInstance();
+    await prefs.setInt('total', total);
+  }
+
+  int totalSum() {
+    if (neckStretchingComplete == true) {
       total++;
-    }
-    else if(waistWorkOutComplete == true){
+    } else if (waistWorkOutComplete == true) {
       total++;
-    }
-    else if(legStretchingComplete == true){
+    } else if (legStretchingComplete == true) {
       total++;
-    }
-    else if(legWorkOutComplete == true){
+    } else if (legWorkOutComplete == true) {
       total++;
-    }
-    else if(hipWorkOutComplete == true){
+    } else if (hipWorkOutComplete == true) {
       total++;
     }
     return total;
@@ -67,20 +70,16 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
-  String imgchange(){
-    if(total % 5 == 0){
+  String imgchange() {
+    if (total % 5 == 0) {
       return 'assets/image/SleepCat.png';
-    }
-    else if(total % 5 == 1){
+    } else if (total % 5 == 1) {
       return 'assets/image/EyesOnYouOrangeCat.png';
-    }
-    else if(total % 5 == 2){
+    } else if (total % 5 == 2) {
       return 'assets/image/OrangeCat.png';
-    }
-    else if(total % 5 == 3){
+    } else if (total % 5 == 3) {
       return 'assets/image/HighFiveOrangeCat.png';
-    }
-    else if(total % 5 == 4){
+    } else if (total % 5 == 4) {
       return 'assets/image/ThumbsUpOrangeCat.gif';
     }
     return '';
@@ -90,6 +89,12 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       hipWorkOutComplete = value;
     });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    initPref();
   }
 
   @override
@@ -149,7 +154,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 );
                 if (result != null) {
-                 updateNeckStretchingBool(result);
+                  updateNeckStretchingBool(result);
                 }
               },
               child: Container(
@@ -182,7 +187,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 60,
                     ),
                     Icon(
-                      neckStretchingComplete? Icons.pets : null,
+                      neckStretchingComplete ? Icons.pets : null,
                       color: Colors.white,
                     )
                   ],
@@ -198,7 +203,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 );
                 if (result != null) {
-                 updateLegStretchingBool(result);
+                  updateLegStretchingBool(result);
                 }
               },
               child: Container(
@@ -247,7 +252,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 );
                 if (result != null) {
-                 updateWaistWorkOutBool(result);
+                  updateWaistWorkOutBool(result);
                 }
               },
               child: Container(
@@ -296,7 +301,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 );
                 if (result != null) {
-                 updateHipWorkOutBool(result);
+                  updateHipWorkOutBool(result);
                 }
               },
               child: Container(
@@ -345,7 +350,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 );
                 if (result != null) {
-                 updateLegWorkOutBool(result);
+                  updateLegWorkOutBool(result);
                 }
               },
               child: Container(
@@ -401,7 +406,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Padding(
                       padding: const EdgeInsets.only(top: 140),
                       child: Text(
-                        '$total',
+                        '$prefs',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 80,
