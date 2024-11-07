@@ -97,6 +97,11 @@ class _HomeScreenState extends State<HomeScreen> {
     initPref();
   }
 
+  callTotal() async{
+    final callTotal = prefs.getInt('total');
+    return callTotal;
+  }
+
   @override
   Widget build(BuildContext context) {
     String img;
