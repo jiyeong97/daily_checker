@@ -26,12 +26,14 @@ class _HomeScreenState extends State<HomeScreen> {
   bool hipWorkOutComplete = false;
   late SharedPreferences prefs;
 
-  Future initPref() async {
+  Future<void> initPref() async{
     prefs = await SharedPreferences.getInstance();
-    await prefs.setInt('total', total);
+    setState(() {
+      total = prefs.getInt('total')??0;
+    });
   }
 
-  int totalSum() {
+  void totalSum() {
     if (neckStretchingComplete == true) {
       total++;
     } else if (waistWorkOutComplete == true) {
@@ -43,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
     } else if (hipWorkOutComplete == true) {
       total++;
     }
-    return total;
+    prefs.setInt('total', total);
   }
 
   void updateNeckStretchingBool(bool value) {
