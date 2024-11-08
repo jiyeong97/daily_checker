@@ -18,34 +18,47 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   String formattedDate = DateFormat.MMMMd('en_US').format(DateTime.now());
-  int total = 0;
   bool neckStretchingComplete = false;
   bool waistWorkOutComplete = false;
   bool legStretchingComplete = false;
   bool legWorkOutComplete = false;
   bool hipWorkOutComplete = false;
-  late SharedPreferences prefs;
+  SharedPreferences? prefs;
+  int total = 0;
 
-  Future<void> initPref() async{
+  @override
+  void initState() {
+    super.initState();
+    initPref();
+  }
+
+  Future<void> initPref() async {
     prefs = await SharedPreferences.getInstance();
     setState(() {
-      total = prefs.getInt('total')??0;
+      total = prefs?.getInt('total') ?? 0;
     });
+
+    totalSum();
   }
 
   void totalSum() {
-    if (neckStretchingComplete == true) {
-      total++;
-    } else if (waistWorkOutComplete == true) {
-      total++;
-    } else if (legStretchingComplete == true) {
-      total++;
-    } else if (legWorkOutComplete == true) {
-      total++;
-    } else if (hipWorkOutComplete == true) {
-      total++;
+    if (prefs != null) {
+      setState(() {
+        if (neckStretchingComplete == true) {
+          total++;
+        } else if (waistWorkOutComplete == true) {
+          total++;
+        } else if (legStretchingComplete == true) {
+          total++;
+        } else if (legWorkOutComplete == true) {
+          total++;
+        } else if (hipWorkOutComplete == true) {
+          total++;
+        }
+      });
+
+      prefs?.setInt('total', total);
     }
-    prefs.setInt('total', total);
   }
 
   void updateNeckStretchingBool(bool value) {
@@ -94,22 +107,10 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   @override
-  void initState() {
-    super.initState();
-    initPref();
-  }
-
-  callTotal() async{
-    final callTotal = prefs.getInt('total');
-    return callTotal;
-  }
-
-  @override
   Widget build(BuildContext context) {
     String img;
     img = imgchange();
     const pawImg = 'assets/image/FoundationPaw.png';
-    totalSum();
 
     return Scaffold(
       appBar: AppBar(
@@ -413,7 +414,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Padding(
                       padding: const EdgeInsets.only(top: 140),
                       child: Text(
-                        '$prefs',
+                        '$total',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 80,
