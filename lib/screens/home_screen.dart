@@ -70,18 +70,21 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       waistWorkOutComplete = value;
     });
+    totalSum();
   }
 
   void updateLegStretchingBool(bool value) {
     setState(() {
       legStretchingComplete = value;
     });
+    totalSum();
   }
 
   void updateLegWorkOutBool(bool value) {
     setState(() {
       legWorkOutComplete = value;
     });
+    totalSum();
   }
 
   String imgchange() {
@@ -103,6 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       hipWorkOutComplete = value;
     });
+    totalSum();
   }
 
   @override
