@@ -44,20 +44,18 @@ class _HomeScreenState extends State<HomeScreen> {
   void totalSum() {
     if (prefs != null) {
       setState(() {
-        if (neckStretchingComplete == true) {
-          total++;
-        } else if (waistWorkOutComplete == true) {
-          total++;
-        } else if (legStretchingComplete == true) {
-          total++;
-        } else if (legWorkOutComplete == true) {
-          total++;
-        } else if (hipWorkOutComplete == true) {
-          total++;
-        }
-      });
+        int incrementCount = 0;
 
-      prefs?.setInt('total', total);
+        if (neckStretchingComplete) incrementCount++;
+        if (waistWorkOutComplete) incrementCount++;
+        if (legStretchingComplete) incrementCount++;
+        if (legWorkOutComplete) incrementCount++;
+        if (hipWorkOutComplete) incrementCount++;
+
+        total += incrementCount;
+
+        prefs?.setInt('total', total);
+      });
     }
   }
 
@@ -65,6 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       neckStretchingComplete = value;
     });
+    totalSum();
   }
 
   void updateWaistWorkOutBool(bool value) {
