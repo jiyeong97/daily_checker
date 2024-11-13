@@ -63,28 +63,67 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       neckStretchingComplete = value;
     });
-    totalSum();
+    if (prefs != null) {
+      setState(() {
+        int incrementCount = 0;
+
+        if (neckStretchingComplete) incrementCount++;
+
+        total += incrementCount;
+
+        prefs?.setInt('total', total);
+      });
+    }
   }
 
   void updateWaistWorkOutBool(bool value) {
     setState(() {
       waistWorkOutComplete = value;
     });
-    totalSum();
+    if (prefs != null) {
+      setState(() {
+        int incrementCount = 0;
+
+        if (waistWorkOutComplete) incrementCount++;
+  
+        total += incrementCount;
+
+        prefs?.setInt('total', total);
+      });
+    }
   }
 
   void updateLegStretchingBool(bool value) {
     setState(() {
       legStretchingComplete = value;
     });
-    totalSum();
+    if (prefs != null) {
+      setState(() {
+        int incrementCount = 0;
+     
+        if (legStretchingComplete) incrementCount++;
+
+        total += incrementCount;
+
+        prefs?.setInt('total', total);
+      });
+    }
   }
 
   void updateLegWorkOutBool(bool value) {
     setState(() {
       legWorkOutComplete = value;
     });
-    totalSum();
+    if (prefs != null) {
+      setState(() {
+        int incrementCount = 0;
+        if (legWorkOutComplete) incrementCount++;
+
+        total += incrementCount;
+
+        prefs?.setInt('total', total);
+      });
+    }
   }
 
   String imgchange() {
@@ -106,7 +145,17 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       hipWorkOutComplete = value;
     });
-    totalSum();
+    if (prefs != null) {
+      setState(() {
+        int incrementCount = 0;
+
+        if (hipWorkOutComplete) incrementCount++;
+
+        total += incrementCount;
+
+        prefs?.setInt('total', total);
+      });
+    }
   }
 
   @override
