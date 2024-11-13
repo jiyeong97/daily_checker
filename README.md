@@ -2,6 +2,8 @@
 
 Daily checking application for work_out.
 
+Youtube Link : https://youtu.be/omT3Q6nUnzU
+
 0. Sprint page
 <img width="393" alt="Sprint Screen" src="https://github.com/user-attachments/assets/847dce0a-5a93-4e45-a25b-1a3a5ad841a4">
 
